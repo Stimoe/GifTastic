@@ -1,0 +1,16 @@
+button,
+div,
+form,
+input {
+  margin: 10px;
+}
+/* #cards {
+  display: flex;
+  flex-wrap: flex;
+} */
+
+#gifs-displayed {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}

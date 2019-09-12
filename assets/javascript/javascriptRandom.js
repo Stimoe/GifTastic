@@ -3,31 +3,36 @@ var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson",
 
 function displayGif() {
     var name = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+    // var queryURL = "https://api.giphy.com/v1/gifs/random?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+    for (var i = 0; i < 10; i++) {
 //link to the queryUrl of GIPHY
     $.ajax({ 
         url: queryURL,
         method: "GET"
       }).then(function(response) {
+        
         //out of the response this pulls the data
        var results= response.data;
+       
         //this goes through the data and assigns classes and appends the title and rating to the div
-       for (var i = 0; i < results.length; i++) {
-        var ratings = results[i].rating;
-        var title=results[i].title;
-      var p = $("<p class='card-text'>").text("Rating: " + ratings);
+       
+         console.log(results)
+        // var ratings = results.rating;
+        var title=results.title;
+    //   var p = $("<p class='card-text'>").text("Rating: " + ratings);
       var gifDiv = $("<img class = 'name gif data-state'>");
       var titleOfCard =$("<p class='card-text'>").text(title)
       gifDiv.attr("data-state", "still")
-      gifDiv.attr("data-still", results[i].images.fixed_width_still.url)
-      gifDiv.attr("data-animate", results[i].images.fixed_width.url)
-      gifDiv.attr("src", results[i].images.fixed_width_still.url);
+      gifDiv.attr("data-still", results.images.fixed_width_still.url)
+      gifDiv.attr("data-animate", results.images.fixed_width.url)
+      gifDiv.attr("src", results.images.fixed_width_still.url);
       var imgCard= $("<div id='img-on-card'>").append(gifDiv)
-        imgCard.append(p)
+        // imgCard.append(p)
         imgCard.prepend(titleOfCard)
         var card=imgCard
       $("#gifs-displayed").prepend(card)  
-}})
+})}
 }
 //this checks what state the gif is in, if it is still it changes it to animate from the source, or if animate it makes still
 $(document).on("click", ".gif", function() {

@@ -5,6 +5,8 @@ function displayGif() {
     var name = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
     // var queryURL = "https://api.giphy.com/v1/gifs/random?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+
+    //when i changed the query to random i had to change the for loop to just run through the whole thing 10 times.
     for (var i = 0; i < 10; i++) {
 //link to the queryUrl of GIPHY
     $.ajax({ 
@@ -15,7 +17,7 @@ function displayGif() {
         //out of the response this pulls the data
        var results= response.data;
        
-        //this goes through the data and assigns classes and appends the title and rating to the div
+        //this goes through the data and assigns classes and appends the title to the div
        
          console.log(results)
         // var ratings = results.rating;

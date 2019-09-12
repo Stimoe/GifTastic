@@ -12,5 +12,7 @@ input {
 #gifs-displayed {
   display: flex;
   flex-wrap: wrap;
- 
+}
+.card-text {
+  color: blue;
 }

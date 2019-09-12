@@ -1,9 +1,5 @@
 # GifTastic
-What the project does
-Why the project is useful
-How users can get started with the project
-Where users can get help with your project
-Who maintains and contributes to the project
+
 
 Giftastic makes buttons from an array, it also allows users to add buttons.
 It also allows users to click on a button and 10 gifs on that subject will display.

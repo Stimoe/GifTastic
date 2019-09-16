@@ -60,10 +60,7 @@ function display(){
 //this gets the value of what they entered in the add a Gif here field
 $("#add-gif").on("click", function(event) {
   console.log("clicked")
-  event.preventDefault();
-  var newButtons = $("#gif-input").val();
-  gifs.push(newButtons);
-  display()
+ 
 })
 //this checks if a button has been clicked and if so runs the displayGif function
 $(document).on("click", ".gif-btn", displayGif);

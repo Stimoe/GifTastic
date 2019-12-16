@@ -4,7 +4,7 @@ var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson",
 function displayGif() {
     var name = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+   
 
     //when i changed the query to random i had to change the for loop to just run through the whole thing 10 times.
     for (var i = 0; i < 10; i++) {

@@ -21,10 +21,10 @@ function displayGif() {
        
         //this goes through the data and assigns classes and appends the title to the div
        
-         console.log(results)
-        // var ratings = results.rating;
+        
+        
         var title=results.title;
-    //   var p = $("<p class='card-text'>").text("Rating: " + ratings);
+   
       var gifDiv = $("<img class = 'name gif data-state'>");
       var titleOfCard =$("<p class='card-text'>").text(title)
       gifDiv.attr("data-state", "still")
@@ -32,7 +32,7 @@ function displayGif() {
       gifDiv.attr("data-animate", results.images.fixed_width.url)
       gifDiv.attr("src", results.images.fixed_width_still.url);
       var imgCard= $("<div id='img-on-card'>").append(gifDiv)
-        // imgCard.append(p)
+       
         imgCard.prepend(titleOfCard)
         var card=imgCard
       $("#gifs-displayed").prepend(card)  
@@ -55,16 +55,16 @@ function display(){
   for (var j = 0; j < gifs.length; j++) {
     var a = $("<button>");
     $("a").addClass("gif-btn");
-    // a.addClass("gif-btn");
+   
     a.attr("class", "gif-btn")
-    // a.attr("class", "data-state")
+   
     a.attr("data-name", gifs[j]);
     a.text(gifs[j]);
     $("#buttons-view").append(a)
 }}
 //this gets the value of what they entered in the add a Gif here field
 $("#add-gif").on("click", function(event) {
-  console.log("clicked")
+
   event.preventDefault();
   var newButtons = $("#gif-input").val();
   gifs.push(newButtons);

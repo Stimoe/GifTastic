@@ -3,20 +3,20 @@ var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson",
 
 function displayGif() {
     var name = $(this).attr("data-name");
-    // var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 //link to the queryUrl of GIPHY
     $.ajax({ 
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        console.log(response)
+
         //out of the response this pulls the data
        var results= response.data;
-       console.log(results)
+
         //this goes through the data and assigns classes and appends the title and rating to the div
        for (var i = 0; i < results.length; i++) {
-         console.log(results)
+
         var ratings = results[i].rating;
         var title=results[i].title;
       var p = $("<p class='card-text'>").text("Rating: " + ratings);
@@ -59,7 +59,7 @@ function display(){
 }}
 //this gets the value of what they entered in the add a Gif here field
 $("#add-gif").on("click", function(event) {
-  console.log("clicked")
+
  
 })
 //this checks if a button has been clicked and if so runs the displayGif function

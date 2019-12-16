@@ -1,10 +1,10 @@
-var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson","Apu", "Barney Gumble", "Chief Clancy Wiggum", "Kent Brockman", "Krusty The Clown", "Martin Prince", "Milhouse Van Houten", "Moe Szyslak", "Mr. Burns", "Ned Flanders", "Ralph Wiggum", "Seymour Skinner", "Seymour Skinner"]
+var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson","Apu", "Barney Gumble", "Chief Clancy Wiggum", "Kent Brockman", "Krusty The Clown", "Martin Prince", "Milhouse Van Houten", "Moe Szyslak", "Mr. Burns", "Ned Flanders", "Ralph Wiggum", "Seymour Skinner"]
 
 
 function displayGif() {
     var name = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+    // var queryURL = "https://api.giphy.com/v1/gifs/random?tag=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 //link to the queryUrl of GIPHY
     $.ajax({ 
         url: queryURL,

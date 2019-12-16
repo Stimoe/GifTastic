@@ -1,4 +1,4 @@
-var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Abraham Simpson","Apu", "Barney Gumble", "Chief Clancy Wiggum", "Kent Brockman", "Krusty The Clown", "Martin Prince", "Milhouse Van Houten", "Moe Szyslak", "Mr. Burns", "Ned Flanders", "Ralph Wiggum", "Seymour Skinner", "Seymour Skinner"]
+var gifs=["Homer Simpson", "Marge Simpson", "Maggie Simpson", "Bart Simpson", "Lisa Simpson", "Abraham Simpson","Apu", "Barney Gumble", "Chief Clancy Wiggum", "Kent Brockman", "Krusty The Clown", "Martin Prince", "Milhouse Van Houten", "Moe Szyslak", "Mr. Burns", "Ned Flanders", "Ralph Wiggum", "Seymour Skinner", "Seymour Skinner"]
 
 
 function displayGif() {
